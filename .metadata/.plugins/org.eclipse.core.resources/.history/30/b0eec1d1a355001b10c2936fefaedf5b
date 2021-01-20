@@ -1,0 +1,24 @@
+package br.senai.sp.jandira;
+
+import br.senai.sp.jandira.model.Conta;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		Conta contaDaMaria = new Conta();
+		
+		Conta contaDoJoao;		
+		contaDoJoao = new Conta();
+		
+		// Determine os dados da conta da Maria
+		contaDaMaria.numero = "100-85";
+		contaDaMaria.titular = "Maria da Silva";
+		contaDaMaria.saldo = 1000.0;
+		contaDaMaria.tipo = "Corrente";
+		contaDaMaria.ativa = true;
+		
+		
+	}
+
+}

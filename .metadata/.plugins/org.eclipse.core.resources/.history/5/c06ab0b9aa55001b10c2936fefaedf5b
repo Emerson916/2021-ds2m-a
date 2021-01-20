@@ -1,0 +1,16 @@
+package br.senai.sp.jandira;
+
+import javax.swing.JFrame;
+
+public class Tela {
+
+	public static void main(String[] args) {
+		
+		JFrame tela = new JFrame();
+		tela.setSize(600, 600);
+		
+		tela.setVisible(true);
+
+	}
+
+}

@@ -1,0 +1,25 @@
+package br.senai.sp.jandira.model;
+
+public class Conta {
+	
+	public String tipo;
+	private double saldo;
+	public String numero;
+	public String titular;
+	public boolean ativa;
+	
+	public void depositar(double valorDeposito) {
+		
+		saldo = valorDeposito;
+		
+	}
+	
+	public void sacar() {
+		
+	}
+	
+	public void transferir() {
+		
+	}
+
+}
