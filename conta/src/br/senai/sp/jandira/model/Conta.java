@@ -2,12 +2,21 @@ package br.senai.sp.jandira.model;
 
 public class Conta {
 	
-	public String tipo;
+	private String tipo;
 	private double saldo;
 	public String numero;
 	public String titular;
 	public boolean ativa;
 	public double chequeEspecial;
+	
+	public void setTipo(String tipo) {
+		
+		if (tipo.equals("Corrente") || tipo.equals("Poupança")) {
+			this.tipo = tipo;
+		}
+		else {
+			System.out.println("Invalido");
+		}
 	
 	public void depositar(double valorDeposito) {
 		
@@ -28,6 +37,10 @@ public class Conta {
 		return saldo;
 	}
 	
+	public String getTitular(){
+		return "E ai gente";
+	}
+	
 	public void sacar(double valorDoSaque) {
 		
 		if ((saldo + chequeEspecial) >= valorDoSaque) {
@@ -44,3 +57,5 @@ public class Conta {
 	}
 
 }
+
+
