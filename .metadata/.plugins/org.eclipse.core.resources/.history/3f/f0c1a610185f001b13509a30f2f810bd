@@ -1,0 +1,17 @@
+package br.senai.sp.jandira;
+
+import br.senai.sp.jandira.model.Cliente;
+
+public class App2 {
+
+	public static void main(String[] args) {
+		
+		/*Criação de cliente*/
+		Cliente pedro = new cliente();
+		pedro.setNome("Pedro Alvares");
+		pedro.setCpf("000000000");
+		pedro.setTelefone("(11)9999999999");
+		pedro.setCep("09999999");
+	}
+
+}

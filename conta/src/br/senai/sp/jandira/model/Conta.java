@@ -4,19 +4,66 @@ public class Conta {
 	
 	private String tipo;
 	private double saldo;
-	public String numero;
-	public String titular;
-	public boolean ativa;
-	public double chequeEspecial;
+	private String numero;
+	private Cliente titular;
+	private boolean ativa;
+	private double chequeEspecial;
 	
+	/*Parte (Titular)*/
+	public void setTitular(Cliente titular) {
+		this.titular = titular;	
+	}
+	
+	public Cliente getTitular() {
+		return this.titular;
+	}
+	
+	/* Parte (tipo)*/
 	public void setTipo(String tipo) {
 		
-		if (tipo.equals("Corrente") || tipo.equals("Poupança")) {
-			this.tipo = tipo;
+		if (tipo.contentEquals("Corrente") || tipo.contentEquals("Poupança")) {
+			this.tipo= tipo;
 		}
 		else {
-			System.out.println("Invalido");
+			System.out.println("Tipo Invalido");
 		}
+	}
+	
+	public String getTipo() {
+		return this.tipo;
+	}
+ 	
+	
+/*Parte (numero)*/	
+	public void setnumero (String numero) {
+		
+		this.numero = numero;
+	}
+	
+	public String getNumero() {
+		return this.numero;
+	}
+
+	
+/*Parte (Ativado e Desativado)*/
+	public void setAtiva(boolean ativa) {
+		this.ativa = ativa;
+	}
+	
+	public boolean isAtiva() {
+		return this.ativa;
+	}
+	
+
+/*Parte (Cheque Especial)*/	
+	public void setChequeEspecial(double ChequeEspecial) {
+		
+		this.chequeEspecial = ChequeEspecial;
+	}
+	
+	public double getChequeEspecial() {
+		return this.chequeEspecial;
+	}
 	
 	public void depositar(double valorDeposito) {
 		
@@ -37,9 +84,7 @@ public class Conta {
 		return saldo;
 	}
 	
-	public String getTitular(){
-		return "E ai gente";
-	}
+	
 	
 	public void sacar(double valorDoSaque) {
 		
